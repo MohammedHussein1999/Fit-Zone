@@ -91,18 +91,13 @@
 }
 
 /* cards */
+.card-backg {
+  @apply bg-seconder hover:bg-[#2c2c2c] text-white flex flex-col transform  rounded-lg justify-evenly transition-transform duration-500 hover:-translate-y-5  h-[34rem] w-max p-5;
+}
+
+.sanin-button {
+  @apply bg-min text-white  text-2xl   p-2 w-full font-bold;
+}
 .cards-contaner {
   @apply flex flex-row justify-center h-max  flex-wrap m-10 gap-5;
-
-  .card-backg {
-    @apply bg-seconder hover:bg-[#2c2c2c] text-white flex flex-col transform  rounded-lg justify-evenly transition-transform duration-500 hover:-translate-y-5  h-[34rem] w-max p-5;
-
-    .sanin-button {
-      @apply bg-min text-white  text-2xl   p-2 w-full font-bold;
-    }
-  }
-
-  .card-mid {
-    /* @apply mb-5 bg-red-900; */
-  }
 }
