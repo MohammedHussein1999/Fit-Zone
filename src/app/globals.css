@@ -2,20 +2,107 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  @apply p-0 m-0 text-right;
+}
+.min-all {
+  @apply min-h-screen m-3 h-max;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.div-footer {
+  @apply w-full bg-seconder min-h-40 flex justify-center items-center text-white flex-col;
+}
+.icon-nav-toggle {
+  @apply md:hidden;
+}
+.links-doer {
+  @apply flex flex-col-reverse;
+}
+.container-min {
+  @apply flex flex-row justify-between;
+}
+.links-nav-min {
+  @apply hidden flex-row  gap-5 justify-center font-bold grow md:flex;
+}
+.link-nav-min {
+  @apply no-underline hover:text-min text-white font-bold cursor-pointer;
+}
+
+/* LOGIN */
+.form-log-in {
+  @apply flex flex-col p-5 bg-seconder border-none outline-none   rounded-lg;
+  label {
+    @apply space-y-2 font-bold text-right border-none outline-none;
+    #outlined-controlled,
+    #outlined-uncontrolled {
+      @apply bg-white rounded-xl text-right p-2 border-none outline-none focus:border-none focus:outline-none;
+    }
+    span {
+      @apply text-white text-right;
+    }
   }
 }
+.button-form {
+  @apply font-bold;
+}
+.page-log {
+  @apply flex justify-center items-center min-h-screen w-full;
+}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* REGISTER */
+.page-register {
+  @apply flex  w-full justify-center  items-center min-h-screen m-5;
+  .form-register {
+    @apply flex flex-col justify-center items-center rounded-lg shadow-lg p-5  max-w-60 bg-seconder w-max;
+    .button-form-register {
+      @apply w-full;
+    }
+    .register-form {
+      @apply flex flex-col text-white text-right;
+      .css-1cmet5c-MuiInputBase-root-MuiInput-root::after {
+        @apply border-b-min;
+      }
+      .css-1cmet5c-MuiInputBase-root-MuiInput-root::before {
+        @apply border-b-white;
+      }
+      Input {
+        @apply text-white text-right after:border-min before:border-white border-min border;
+      }
+    }
+    .option-data {
+      @apply text-right;
+      .option-data-hint {
+        @apply text-red-500 opacity-75;
+      }
+    }
+    .option-data-radio {
+      @apply text-white;
+      svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1bz1rr0-MuiSvgIcon-root {
+        @apply text-purple-500;
+      }
+      .css-13lvt8g-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+        @apply text-purple-500;
+      }
+    }
+  }
+}
+.hover-custom {
+  @apply hover:text-min;
+}
+
+/* cards */
+.cards-contaner {
+  @apply flex flex-row justify-center h-max  flex-wrap m-10 gap-5;
+
+  .card-backg {
+    @apply bg-seconder hover:bg-[#2c2c2c] text-white flex flex-col transform  rounded-lg justify-evenly transition-transform duration-500 hover:-translate-y-5  h-[34rem] w-max p-5;
+
+    .sanin-button {
+      @apply bg-min text-white  text-2xl   p-2 w-full font-bold;
+    }
+  }
+
+  .card-mid {
+    /* @apply mb-5 bg-red-900; */
+  }
 }
