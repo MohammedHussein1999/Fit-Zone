@@ -66,6 +66,7 @@ export default function Register() {
             <span> الاسم بالكامل</span>
             <Field
               as={Input}
+              className=" before:border-white border "
               name="username"
               required
               inputProps={ariaLabel}

@@ -30,12 +30,12 @@
 
 /* LOGIN */
 .form-log-in {
-  @apply flex flex-col p-5 bg-seconder border-none outline-none   rounded-lg;
+  @apply flex flex-col p-5 w-96 bg-seconder border-none outline-none   rounded-lg;
   label {
     @apply space-y-2 font-bold text-right border-none outline-none;
     #outlined-controlled,
     #outlined-uncontrolled {
-      @apply bg-white rounded-xl text-right p-2 border-none outline-none focus:border-none focus:outline-none;
+      @apply bg-white rounded-xl text-right p-2 border-none outline-none focus:border-none w-80 focus:outline-none;
     }
     span {
       @apply text-white text-right;
@@ -43,30 +43,28 @@
   }
 }
 .button-form {
-  @apply font-bold;
+  @apply font-bold w-full;
 }
 .page-log {
   @apply flex justify-center items-center min-h-screen w-full;
+}
+.field-a {
+  @apply border-b-red-500;
 }
 
 /* REGISTER */
 .page-register {
   @apply flex  w-full justify-center  items-center min-h-screen m-5;
   .form-register {
-    @apply flex flex-col justify-center items-center rounded-lg shadow-lg p-5  max-w-60 bg-seconder w-max;
+    @apply flex flex-col justify-center items-center rounded-lg shadow-lg p-5  max-w-96 bg-seconder w-max;
     .button-form-register {
       @apply w-full;
     }
     .register-form {
       @apply flex flex-col text-white text-right;
-      .css-1cmet5c-MuiInputBase-root-MuiInput-root::after {
-        @apply border-b-min;
-      }
-      .css-1cmet5c-MuiInputBase-root-MuiInput-root::before {
-        @apply border-b-white;
-      }
+
       Input {
-        @apply text-white text-right after:border-min before:border-white border-min border;
+        @apply text-white text-right after:border-min before:border-white border-min border w-72;
       }
     }
     .option-data {
@@ -77,10 +75,10 @@
     }
     .option-data-radio {
       @apply text-white;
-      svg.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-1bz1rr0-MuiSvgIcon-root {
+      .css-6m95b7.Mui-checked {
         @apply text-purple-500;
       }
-      .css-13lvt8g-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+      .css-6m95b7.Mui-checked {
         @apply text-purple-500;
       }
     }
@@ -100,4 +98,10 @@
 }
 .cards-contaner {
   @apply flex flex-row justify-center h-max  flex-wrap m-10 gap-5;
+}
+.css-t6zb6l::after {
+  @apply border-b-min;
+}
+.css-t6zb6l::before {
+  @apply border-b-white;
 }
