@@ -66,7 +66,7 @@ export default function Register() {
             <span> الاسم بالكامل</span>
             <Field
               as={Input}
-              className=" before:border-white border "
+              className=" before:border-white  after:border-min"
               name="username"
               required
               inputProps={ariaLabel}
@@ -82,6 +82,7 @@ export default function Register() {
           <label htmlFor="phone" className="register-form">
             <span>رقم الواتساب</span>
             <Field
+              className=" before:border-white  after:border-min"
               as={Input}
               name="phone"
               required
@@ -99,6 +100,7 @@ export default function Register() {
           <label htmlFor="address" className="register-form">
             <span>العنوان</span>
             <Field
+              className=" before:border-white  after:border-min"
               as={Input}
               name="address"
               required
@@ -115,7 +117,7 @@ export default function Register() {
           <label htmlFor="password" className="register-form">
             <span>كلمة المرور</span>
             <Field
-              className="field-a"
+              className=" before:border-white  after:border-min"
               as={Input}
               name="password"
               required
@@ -132,7 +134,7 @@ export default function Register() {
           <label htmlFor="text" className="register-form">
             <span> كود ااحالة</span>
             <Field
-              className="field-a"
+              className=" before:border-white  after:border-min"
               as={Input}
               name="get"
               required
@@ -154,6 +156,7 @@ export default function Register() {
                   <FormControl className="option-data-radio">
                     <FormLabel
                       id="socialStatus-group-label"
+                      className="text-white"
                       sx={{ color: "white" }}
                     >
                       اختيار الحالة الاجتماعية
@@ -167,22 +170,22 @@ export default function Register() {
                     >
                       <FormControlLabel
                         value="single"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="سنجولة طالبة"
                       />
                       <FormControlLabel
                         value="graduate"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="سنجولة متخرجة"
                       />
                       <FormControlLabel
                         value="married_new"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="متجوزة جديدة"
                       />
                       <FormControlLabel
                         value="married_with_kids"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="متجوزة ومعاي اولاد"
                       />
                     </RadioGroup>
@@ -192,6 +195,7 @@ export default function Register() {
                   <FormControl className="option-data-radio">
                     <FormLabel
                       id="socialStatus-group-label"
+                      className="text-white"
                       sx={{ color: "white" }}
                     >
                       هدفك ايه
@@ -203,17 +207,17 @@ export default function Register() {
                     >
                       <FormControlLabel
                         value="Weight_loss"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="تخسيس وريشيبينج"
                       />
                       <FormControlLabel
                         value="weight_gain"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="زيادة وزن وعلاج نحافة"
                       />
                       <FormControlLabel
                         value="entertainment"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="ترفية ورقص شرقي"
                       />
                     </RadioGroup>
@@ -223,6 +227,7 @@ export default function Register() {
                   <FormControl className="option-data-radio">
                     <FormLabel
                       id="socialStatus-group-label"
+                      className="text-white"
                       sx={{ color: "white" }}
                     >
                       هدفك ايه
@@ -234,17 +239,17 @@ export default function Register() {
                     >
                       <FormControlLabel
                         value="Weight_loss"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="تخسيس وريشيبينج"
                       />
                       <FormControlLabel
                         value="weight_gain"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="زيادة وزن وعلاج نحافة"
                       />
                       <FormControlLabel
                         value="entertainment"
-                        control={<Radio />}
+                        control={<Radio className=" text-purple-400" />}
                         label="ترفية ورقص شرقي"
                       />
                     </RadioGroup>
