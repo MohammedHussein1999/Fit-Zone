@@ -90,7 +90,7 @@ export default function StateTextFields() {
           <Button
             type="submit"
             variant="contained"
-            className="button-form"
+            className="button-form w-full"
             color="success"
             disabled={
               !values.phone ||

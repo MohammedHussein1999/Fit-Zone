@@ -11,7 +11,7 @@ import {
   FormLabel,
   Switch,
 } from "@mui/material";
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
 const ariaLabel = { "aria-label": "description" };
@@ -27,6 +27,8 @@ const validationSchema = Yup.object({
     .required("كلمة المرور مطلوبة")
     .min(6, "كلمة المرور يجب أن تكون 6 حروف على الأقل"),
   socialStatus: Yup.string().required("اختيار الحالة الاجتماعية مطلوب"),
+  target: Yup.string().required("اختيار الحالة الاجتماعية مطلوب"),
+  weight: Yup.string().required("اختيار الحالة الاجتماعية مطلوب"),
 });
 
 export default function Register() {
@@ -43,7 +45,9 @@ export default function Register() {
         phone: "",
         address: "",
         password: "",
-        socialStatus: "single",
+        socialStatus: "",
+        target: "",
+        weight: "",
       }}
       validationSchema={validationSchema}
       onSubmit={(values) => {
@@ -59,7 +63,7 @@ export default function Register() {
           autoComplete="off"
         >
           <label htmlFor="username" className="register-form">
-            <span>اسم المستخدم</span>
+            <span> الاسم بالكامل</span>
             <Field
               as={Input}
               name="username"
@@ -75,7 +79,7 @@ export default function Register() {
           </label>
 
           <label htmlFor="phone" className="register-form">
-            <span>رقم الهاتف</span>
+            <span>رقم الواتساب</span>
             <Field
               as={Input}
               name="phone"
@@ -110,6 +114,7 @@ export default function Register() {
           <label htmlFor="password" className="register-form">
             <span>كلمة المرور</span>
             <Field
+              className="field-a"
               as={Input}
               name="password"
               required
@@ -123,6 +128,17 @@ export default function Register() {
               style={{ color: "red" }}
             />
           </label>
+          <label htmlFor="text" className="register-form">
+            <span> كود ااحالة</span>
+            <Field
+              className="field-a"
+              as={Input}
+              name="get"
+              required
+              type="text"
+              inputProps={ariaLabel}
+            />
+          </label>
 
           <div className="option-data">
             <Switch inputProps={ariaLabel} onChange={show} color="secondary" />
@@ -132,42 +148,108 @@ export default function Register() {
             </dd>
 
             {showHidden && (
-              <FormControl className="option-data-radio">
-                <FormLabel
-                  id="socialStatus-group-label"
-                  sx={{ color: "white" }}
-                >
-                  اختيار الحالة الاجتماعية
-                </FormLabel>
-                <RadioGroup
-                  name="socialStatus"
-                  value={values.socialStatus}
-                  onChange={(e) =>
-                    setFieldValue("socialStatus", e.target.value)
-                  }
-                >
-                  <FormControlLabel
-                    value="single"
-                    control={<Radio />}
-                    label="سنجولة طالبة"
-                  />
-                  <FormControlLabel
-                    value="graduate"
-                    control={<Radio />}
-                    label="سنجولة متخرجة"
-                  />
-                  <FormControlLabel
-                    value="married_new"
-                    control={<Radio />}
-                    label="متجوزة جديدة"
-                  />
-                  <FormControlLabel
-                    value="married_with_kids"
-                    control={<Radio />}
-                    label="متجوزة ومعاي اولاد"
-                  />
-                </RadioGroup>
-              </FormControl>
+              <div>
+                <div className=" radio-option flex flex-row flex-wrap">
+                  <FormControl className="option-data-radio">
+                    <FormLabel
+                      id="socialStatus-group-label"
+                      sx={{ color: "white" }}
+                    >
+                      اختيار الحالة الاجتماعية
+                    </FormLabel>
+                    <RadioGroup
+                      name="socialStatus"
+                      value={values.socialStatus}
+                      onChange={(e) =>
+                        setFieldValue("socialStatus", e.target.value)
+                      }
+                    >
+                      <FormControlLabel
+                        value="single"
+                        control={<Radio />}
+                        label="سنجولة طالبة"
+                      />
+                      <FormControlLabel
+                        value="graduate"
+                        control={<Radio />}
+                        label="سنجولة متخرجة"
+                      />
+                      <FormControlLabel
+                        value="married_new"
+                        control={<Radio />}
+                        label="متجوزة جديدة"
+                      />
+                      <FormControlLabel
+                        value="married_with_kids"
+                        control={<Radio />}
+                        label="متجوزة ومعاي اولاد"
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </div>
+                <div>
+                  <FormControl className="option-data-radio">
+                    <FormLabel
+                      id="socialStatus-group-label"
+                      sx={{ color: "white" }}
+                    >
+                      هدفك ايه
+                    </FormLabel>
+                    <RadioGroup
+                      name="target"
+                      value={values.target}
+                      onChange={(e) => setFieldValue("target", e.target.value)}
+                    >
+                      <FormControlLabel
+                        value="Weight_loss"
+                        control={<Radio />}
+                        label="تخسيس وريشيبينج"
+                      />
+                      <FormControlLabel
+                        value="weight_gain"
+                        control={<Radio />}
+                        label="زيادة وزن وعلاج نحافة"
+                      />
+                      <FormControlLabel
+                        value="entertainment"
+                        control={<Radio />}
+                        label="ترفية ورقص شرقي"
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </div>
+                <div>
+                  <FormControl className="option-data-radio">
+                    <FormLabel
+                      id="socialStatus-group-label"
+                      sx={{ color: "white" }}
+                    >
+                      هدفك ايه
+                    </FormLabel>
+                    <RadioGroup
+                      name="weight"
+                      value={values.weight}
+                      onChange={(e) => setFieldValue("weight", e.target.value)}
+                    >
+                      <FormControlLabel
+                        value="Weight_loss"
+                        control={<Radio />}
+                        label="تخسيس وريشيبينج"
+                      />
+                      <FormControlLabel
+                        value="weight_gain"
+                        control={<Radio />}
+                        label="زيادة وزن وعلاج نحافة"
+                      />
+                      <FormControlLabel
+                        value="entertainment"
+                        control={<Radio />}
+                        label="ترفية ورقص شرقي"
+                      />
+                    </RadioGroup>
+                  </FormControl>
+                </div>
+              </div>
             )}
           </div>
 

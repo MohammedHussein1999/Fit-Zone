@@ -17,8 +17,9 @@ import {
   Login,
   ProductionQuantityLimits,
 } from "@mui/icons-material";
+import CssBaseline from "@mui/material/CssBaseline";
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children, Component, pageProps }) {
   const loc = usePathname();
   const Theme = createTheme({
     colors: {
@@ -63,15 +64,15 @@ export default function RootLayout({ children }) {
       </Head>
 
       <body>
-        <StyledEngineProvider injectFirst>
-          <ThemeProvider theme={Theme}>
+        <ThemeProvider theme={Theme}>
+          <StyledEngineProvider injectFirst>
             <Navbar links={navLink} />
             <main dir="rtl" className=" min-all">
               {children}
             </main>
             <Footer />
-          </ThemeProvider>
-        </StyledEngineProvider>
+          </StyledEngineProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
