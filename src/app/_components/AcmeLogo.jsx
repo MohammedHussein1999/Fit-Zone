@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const AcmeLogo = () => (
   <Image
-    src="./images/PNGLOGO.png"
+    src="images/PNGLOGO.png"
     alt="Logo"
     
     width={55}
