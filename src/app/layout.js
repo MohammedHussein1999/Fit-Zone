@@ -17,7 +17,9 @@ import {
   Login,
   ProductionQuantityLimits,
 } from "@mui/icons-material";
-import CssBaseline from "@mui/material/CssBaseline";
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 export default function RootLayout({ children, Component, pageProps }) {
   const loc = usePathname();
@@ -47,6 +49,17 @@ export default function RootLayout({ children, Component, pageProps }) {
   return (
     <html lang="en">
       <Head>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
