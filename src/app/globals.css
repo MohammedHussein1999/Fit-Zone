@@ -1,12 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 * {
   @apply p-0 m-0 text-right;
 }
 .min-all {
-  @apply min-h-screen m-3 h-max;
+  @apply min-h-screen  h-max;
 }
 
 .div-footer {
@@ -22,10 +21,14 @@
   @apply flex flex-row justify-between;
 }
 .links-nav-min {
-  @apply hidden flex-row  gap-5 justify-center font-bold grow md:flex;
+  @apply hidden flex-row items-center gap-5 grow md:flex;
 }
 .link-nav-min {
-  @apply no-underline hover:text-min text-white font-bold cursor-pointer;
+  @apply no-underline text-lg hover:text-min text-white font-bold cursor-pointer;
+}
+
+.link-nav-min.login {
+  @apply bg-yellow-600 hover:text-gray-50 hover:bg-seconder transition-colors ease-linear p-1 px-2 rounded-lg;
 }
 
 /* LOGIN */
@@ -54,9 +57,9 @@
 
 /* REGISTER */
 .page-register {
-  @apply flex  w-full justify-center  items-center min-h-screen m-5;
+  @apply flex  w-full justify-center  items-center min-h-screen ;
   .form-register {
-    @apply flex flex-col justify-center items-center rounded-lg shadow-lg p-5  max-w-96 bg-seconder w-max;
+    @apply flex flex-col justify-center items-center rounded-lg shadow-lg p-5  max-w-96 bg-secondary w-max;
     .button-form-register {
       @apply w-full;
     }
@@ -76,10 +79,10 @@
     .option-data-radio {
       @apply text-white;
       .css-6m95b7.Mui-checked {
-        @apply text-purple-500;
+        @apply text-min;
       }
       .css-6m95b7.Mui-checked {
-        @apply text-purple-500;
+        @apply text-min;
       }
     }
   }

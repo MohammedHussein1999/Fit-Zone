@@ -1,54 +1,47 @@
 "use client";
-
-import * as React from "react";
+import { useState } from "react";
+import Link from "next/link";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import Link from "@mui/material/Link";
-
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import {
-  Divider,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemIcon,
-  ListItemText,
-  Drawer,
-} from "@mui/material";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { useTheme } from "@emotion/react";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Divider, List, ListItem, ListItemButton, Drawer } from "@mui/material";
+import { useTheme } from "@mui/material/styles"; 
 import { AcmeLogo } from "./AcmeLogo";
 
 export default function ButtonAppBar({ links }) {
-  const [open, setOpen] = React.useState();
-  function toggleMenu(e) {
-    setOpen(e);
-    console.log(e);
-  }
+  const [open, setOpen] = useState(false); 
   const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"), {
+    noSsr: true,
+  });
+  console.log(isSmallScreen);
+
+  function toggleMenu(state) {
+    setOpen(state);
+    console.log(state);
+  }
 
   const DrawerList = (
     <Box
-      className="w-fll"
+      className="w-full"
       sx={{
         width: 250,
-        color: "white",
-        bgcolor: theme.colors.secondary,
+        color: "red",
+        bgcolor: theme.palette.main.primary,
         height: "100%",
       }}
-      color="min"
-      onClick={() => toggleDrawer(false)}
+      onClick={() => toggleMenu(false)}
     >
       <List className="links-doer">
-        {links.map((text) => (
-          <ListItem key={text.name_en} disablePadding>
+        {links.map((link) => (
+          <ListItem key={link.name_en} disablePadding>
             <ListItemButton className="hover-custom">
-              <Link className="link-nav-min" href={text.name_en}>
-                {text.icon} {text.name_ar}
+              <Link href={link.name_en} className="link-nav-min">
+                {link.icon} {link.name_ar}
               </Link>
             </ListItemButton>
           </ListItem>
@@ -63,13 +56,17 @@ export default function ButtonAppBar({ links }) {
       <AppBar
         position="static"
         color="inherit"
-        sx={{ flexGrow: 1, bgcolor: theme.colors.secondary, color: "white" }}
+        sx={{
+          flexGrow: 1,
+          bgcolor: theme.palette.main.primary,
+          color: "white",
+        }}
       >
-        <Toolbar className="container-min ">
+        <Toolbar className="container-min">
           <IconButton
             onClick={() => toggleMenu(true)}
             size="large"
-            className="icon-nav-toggle "
+            className="icon-nav-toggle"
             edge="start"
             color="inherit"
             aria-label="menu"
@@ -82,19 +79,24 @@ export default function ButtonAppBar({ links }) {
             {DrawerList}
           </Drawer>
 
-          <Box className="links-nav-min">
-            {links.map((text, index) => (
-              <Link
-                className="link-nav-min"
-                key={index}
-                variant="h6"
-                href={`${text.name_en}`}
-              >
-                {text.name_ar}
-              </Link>
-            ))}
-          </Box>
+          {/* Conditionally render links based on screen size */}
+          {!isSmallScreen && (
+            <Box className="links-nav-min flex-grow">
+              {links.map((link, index) => (
+                <Link
+                  className={`link-nav-min ${
+                    index === 1 ? "login font-bold" : "font-medium"
+                  }`}
+                  key={link.name_en}
+                  href={`${link.name_en}`}
+                >
+                  {link.name_ar}
+                </Link>
+              ))}
+            </Box>
+          )}
 
+          {/* Logo aligned to the right */}
           <Button color="inherit">
             <AcmeLogo />
           </Button>
