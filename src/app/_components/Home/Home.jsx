@@ -1,28 +1,32 @@
 "use client";
-
 import Blogs from "../blogs/Blogs";
 import CardBackg from "../cardBackg.jsx/Card";
 import SlideProduct from "../prodacts/SlideProduct";
 
 export default function Home() {
   return (
-    <div>
-      <div className="cards-contaner">
-        <CardBackg
-          title="Tatle1"
-          data="A1"
-          des="Mohamed , count , class , cotsh"
-        />
-        <CardBackg
-          title="Tatle2"
-          data="A2"
-          des="Mohamed , count , class , cotsh"
-        />
-        <CardBackg
-          title="Tatle3"
-          data="A3"
-          des="Mohamed , count , class , cotsh"
-        />
+    <>
+      <div className=" p-10">
+        <h1 className="text-center font-bold text-6xl text-min mb-10">
+          الباقــات
+        </h1>
+        <div className="flex gap-8  justify-center flex-wrap">
+          <CardBackg
+            title="الباقة الاساسيه"
+            data="A1"
+            des={["Mohamed", "count", "class", "cotsh"]}
+          />
+          <CardBackg
+            title="الباقة الجولد "
+            data="A2"
+            des={["Mohamed", "count", "class", "cotsh"]}
+          />
+          <CardBackg
+            title="الباقة البرو"
+            data="A3"
+            des={["Mohamed", "count", "class", "cotsh"]}
+          />
+        </div>
       </div>
       <div>
         <SlideProduct />
@@ -30,6 +34,6 @@ export default function Home() {
       <div className=" w-11/12 my-5 mx-auto shadow-xl">
         <Blogs />
       </div>
-    </div>
+    </>
   );
 }
