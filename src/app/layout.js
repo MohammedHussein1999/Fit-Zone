@@ -46,6 +46,7 @@ const arrayHome = [
 ];
 
 const Theme = createTheme({
+  direction: "rtl",
   typography: {
     fontFamily: "Cairo, sans-serif",
     fontWeightRegular: 300,
@@ -94,11 +95,16 @@ export default function RootLayout({ children, Component, pageProps }) {
   const router = useRouter();
   
 
-  const navLink = loc !== "/" && loc !== "/register" ? arrayHome : arrayLog;
+  const navLink =
+    loc === "/"
+      ? arrayLog
+      : loc !== "/register" && loc !== "/login"
+      ? arrayHome
+      : null;
 
 
   return (
-    <html lang="en">
+    <html lang="en" >
       <Head>
         <link
           rel="stylesheet"
@@ -131,11 +137,11 @@ export default function RootLayout({ children, Component, pageProps }) {
       <body className={`font-cairo ${cairoFont.className} `}>
         <ThemeProvider theme={Theme}>
           <StyledEngineProvider injectFirst>
-            <Navbar links={navLink} />
+         {  navLink && <Navbar links={navLink} />}
             <main dir="rtl" className="min-all bg-seconder">
               {children}
             </main>
-            <Footer />
+            {navLink && <Footer />}
           </StyledEngineProvider>
         </ThemeProvider>
       </body>

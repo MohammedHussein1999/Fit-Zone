@@ -15,26 +15,26 @@ const bull = (
   </Box>
 );
 
-export default function CardBackg({title,data,des}) {
+export default function CardBackg({title,data,des=[]}) {
   return (
-    <Card sx={{ minWidth: 275 }} className="card-backg">
-      <CardContent>
-        <Typography variant="h4" component="div">
-          {title}
-        </Typography>
-        <Typography gutterBottom sx={{ fontSize: 14 }}>
-          {data}
-        </Typography>
-        <Typography sx={{ mb: 1.5 }}>adjective</Typography>
-        <Typography variant="body2">
-          {des}
-          <br />
-          {'"a benevolent smile"'}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small" className="sanin-button">اشتراك</Button>
-      </CardActions>
-    </Card>
+    <div className=" hover:-translate-y-3 ease-in-out  min-w-72 h-80  rounded-lg max-w-sm p-6 bg-white/30 backdrop-blur-lg roaunded-lg border border-white/20 shadow-lg">
+      <div className=" w-full text-3xl text-white/70 font-bold text-center">{title}</div>
+      <div className="my-3 text-center semi-bold text-white text-xl">{data}</div>
+      <ul className="content mb-5 ">{des?.map((el) => (
+        <li className="py-1 mb-1 w-full" key={el}>{el}</li>
+      ))}</ul>
+
+      <div className="fotter mt-auto w-full font-bold ">
+        <Button
+          sx={{boxShadow:"none" , fontWeight:"bold" }}
+          type="submit"
+          variant="contained"
+          color="main"
+          fullWidth
+        >
+          اشتـراك
+        </Button>
+      </div>
+    </div>
   );
 }

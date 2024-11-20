@@ -1,5 +1,4 @@
-import Register from "../_components/Register/register_form/Register";
-
+import Register from "@/app/_components/auth_forms/Register/Register";
 
 export default function Page() {
   return (
