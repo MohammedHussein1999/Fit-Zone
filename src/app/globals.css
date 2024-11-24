@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  @apply p-0 m-0 text-right;
+}
+.min-all {
+  @apply min-h-screen  h-max;
+}
+
+.div-footer {
+  @apply w-full bg-seconder min-h-40 flex justify-center items-center text-white flex-col;
+}
+.icon-nav-toggle {
+  @apply md:hidden;
+}
+.links-doer {
+  @apply flex flex-col-reverse;
+}
+.container-min {
+  @apply flex flex-row justify-between;
+}
+.links-nav-min {
+  @apply hidden flex-row items-center gap-5 grow md:flex;
+}
+.link-nav-min {
+  @apply no-underline text-lg hover:text-min text-white font-bold cursor-pointer;
+}
+
+.link-nav-min.login {
+  @apply bg-yellow-600 hover:text-gray-50 hover:bg-seconder transition-colors ease-linear p-1 px-2 rounded-lg;
+}
+
+/* LOGIN */
+.form-log-in {
+  @apply flex flex-col p-5 w-96 bg-seconder border-none outline-none   rounded-lg;
+  label {
+    @apply space-y-2 font-bold text-right border-none outline-none;
+    #outlined-controlled,
+    #outlined-uncontrolled {
+      @apply bg-white rounded-xl text-right p-2 border-none outline-none focus:border-none w-80 focus:outline-none;
+    }
+    span {
+      @apply text-white text-right;
+    }
+  }
+}
+.button-form {
+  @apply font-bold w-full;
+}
+.page-log {
+  @apply flex justify-center items-center min-h-screen w-full;
+}
+.field-a {
+  @apply border-b-red-500;
+}
+
+/* REGISTER */
+.page-register {
+  @apply flex  w-full justify-center  items-center min-h-screen ;
+  .form-register {
+    @apply flex flex-col justify-center items-center rounded-lg shadow-lg p-5  max-w-96 bg-secondary w-max;
+    .button-form-register {
+      @apply w-full;
+    }
+    .register-form {
+      @apply flex flex-col text-white text-right;
+
+      Input {
+        @apply text-white text-right after:border-min before:border-white border-min border w-72;
+      }
+    }
+    .option-data {
+      @apply text-right;
+      .option-data-hint {
+        @apply text-red-500 opacity-75;
+      }
+    }
+    .option-data-radio {
+      @apply text-white;
+      .css-6m95b7.Mui-checked {
+        @apply text-min;
+      }
+      .css-6m95b7.Mui-checked {
+        @apply text-min;
+      }
+    }
+  }
+}
+.hover-custom {
+  @apply hover:text-min;
+}
+
+/* cards */
+.card-backg {
+  @apply bg-seconder hover:bg-[#2c2c2c] text-white flex flex-col transform  rounded-lg justify-evenly transition-transform duration-500 hover:-translate-y-5  h-[34rem] w-max p-5;
+}
+
+.sanin-button {
+  @apply bg-min text-white  text-2xl   p-2 w-full font-bold;
+}
+.cards-contaner {
+  @apply flex flex-row justify-center h-max  flex-wrap m-10 gap-5;
+}
+.css-t6zb6l::after {
+  @apply border-b-min;
+}
+.css-t6zb6l::before {
+  @apply border-b-white;
+}
