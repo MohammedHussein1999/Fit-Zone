@@ -27,14 +27,7 @@ const card = (
       <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
         adjective
       </Typography>
-      <Typography variant="body2">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem sequi
-        iusto ex possimus. Reprehenderit rerum rem accusamus maxime maiores
-        laborum illum repellat fuga. Nesciunt minima rerum obcaecati, laudantium
-        veritatis at.
-        <br />
-        {'"a benevolent smile"'}
-      </Typography>
+      <img src="public/images/صورة واتساب بتاريخ 2024-11-18 في 18.29.38_67fd0272.jpg" alt="" />
     </CardContent>
     <CardActions>
       <Button size="small">Learn More</Button>
@@ -44,7 +37,7 @@ const card = (
 
 export default function Blogs() {
   return (
-    <Box sx={{ minWidth: 275 }} className="hover:scale-105 duration-500">
+    <Box  className="hover:scale-105 duration-500">
       <Card variant="outlined">{card}</Card>
     </Box>
   );

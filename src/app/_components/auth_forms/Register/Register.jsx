@@ -9,7 +9,7 @@ import {
   FormHelperText,
 } from "@mui/material";
 import Link from "next/link";
-import Image from "next/image";
+
 import useForm from "@/app/_hook/useForm";
 import TextInput from "../form_items/TextInput";
 import CustomRadioGroup from "../form_items/CustomRadioGroup";

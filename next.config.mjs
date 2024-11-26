@@ -1,4 +1,11 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+
+const nextConfig = {
+  // basePath: "/",
+
+  reactStrictMode: true,
+};
+
+// module.exports = nextConfig;
 
 export default nextConfig;

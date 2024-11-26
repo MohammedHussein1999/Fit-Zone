@@ -135,15 +135,15 @@ export default function RootLayout({ children, Component, pageProps }) {
       </Head>
 
       <body className={`font-cairo ${cairoFont.className} `}>
-        <ThemeProvider theme={Theme}>
           <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={Theme}>
          {  navLink && <Navbar links={navLink} />}
             <main dir="rtl" className="min-all bg-seconder">
               {children}
             </main>
             {navLink && <Footer />}
-          </StyledEngineProvider>
         </ThemeProvider>
+          </StyledEngineProvider>
       </body>
     </html>
   );

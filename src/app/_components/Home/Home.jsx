@@ -1,5 +1,5 @@
 
-'use client'
+
 import Blogs from "../blogs/Blogs";
 import CardBackg from "../cardBackg.jsx/Card";
 import SlideProduct from "../prodacts/SlideProduct";

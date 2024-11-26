@@ -1,3 +1,4 @@
+"use client"
 import Link from "next/link";
 import React from "react";
 import Slider from "react-slick";
@@ -16,46 +17,31 @@ export default function SlideProduct() {
           slidesToShow: 3,
           slidesToScroll: 3,
         };
+  const imgArray = [
+    'public/images/1.jpg',
+    'public/images/2.jpg',
+    'public/images/3.jpg',
+    'public/images/4.jpg',
+    'public/images/5.jpg',
+    'public/images/6.jpg',
+    'public/images/7.jpg',
+    'public/images/8.jpg',
+    'public/images/9.jpg',
+    'public/images/10.jpg',
+  ]
   return (
     <div className="slider-container  bg-[#eeeeeeab] py-10">
       <Link href="products">
         <Slider {...settings}>
-          <div>
+          {imgArray.map((e,index) => (
+            <div key={index}>
             <img
-              src="https://fakeimg.pl/350x200/?text=World&font=lobster"
+              src={e}
               alt="#"
             />
-          </div>
-          <div>
-            <img
-              src="https://fakeimg.pl/350x200/?text=World&font=lobster"
-              alt="#"
-            />
-          </div>
-          <div>
-            <img
-              src="https://fakeimg.pl/350x200/?text=World&font=lobster"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://fakeimg.pl/350x200/?text=World&font=lobster"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://fakeimg.pl/350x200/?text=World&font=lobster"
-              alt=""
-            />
-          </div>
-          <div>
-            <img
-              src="https://fakeimg.pl/350x200/?text=World&font=lobster"
-              alt=""
-            />
-          </div>
+            </div>
+          ))}
+
         </Slider>
       </Link>
     </div>
