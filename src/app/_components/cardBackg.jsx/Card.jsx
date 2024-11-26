@@ -24,7 +24,7 @@ export default function CardBackg({title,data,des=[]}) {
         <li className="py-1 mb-1 w-full" key={el}>{el}</li>
       ))}</ul>
 
-      <div className="fotter mt-auto w-full font-bold ">
+      <div className="fotter mt-auto w-full font-bold">
         <Button
           sx={{boxShadow:"none" , fontWeight:"bold" }}
           type="submit"
