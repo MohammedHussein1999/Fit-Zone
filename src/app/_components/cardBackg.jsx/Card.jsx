@@ -1,4 +1,3 @@
-
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -17,16 +16,24 @@ const bull = (
 
 export default function CardBackg({title,data,des=[]}) {
   return (
-    <div className=" hover:-translate-y-3 ease-in-out  min-w-72 h-80  rounded-lg max-w-sm p-6 bg-white/30 backdrop-blur-lg roaunded-lg border border-white/20 shadow-lg">
-      <div className=" w-full text-3xl text-white/70 font-bold text-center">{title}</div>
-      <div className="my-3 text-center semi-bold text-white text-xl">{data}</div>
-      <ul className="content mb-5 ">{des?.map((el) => (
-        <li className="py-1 mb-1 w-full" key={el}>{el}</li>
-      ))}</ul>
+    <div className=" hover:-translate-y-3 transition-transform duration-450 min-w-72 h-80  rounded-lg max-w-sm p-6 bg-white/30 backdrop-blur-lg roaunded-lg border border-white/20 shadow-lg">
+      <div className=" w-full text-3xl text-white/70 font-bold text-center">
+        {title}
+      </div>
+      <div className="my-3 text-center semi-bold text-white text-xl">
+        {data}
+      </div>
+      <ul className="content mb-5 ">
+        {des?.map((el) => (
+          <li className="py-1 mb-1 w-full" key={el}>
+            {el}
+          </li>
+        ))}
+      </ul>
 
       <div className="fotter mt-auto w-full font-bold">
         <Button
-          sx={{boxShadow:"none" , fontWeight:"bold" }}
+          sx={{ boxShadow: "none", fontWeight: "bold" }}
           type="submit"
           variant="contained"
           color="main"

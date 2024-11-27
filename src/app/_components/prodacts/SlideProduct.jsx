@@ -12,12 +12,11 @@ export default function SlideProduct() {
           autoplay: true,
           speed: 500,
           autoplaySpeed: 3000,
-
           slidesToShow: 3,
           slidesToScroll: 3,
         };
   return (
-    <div className="slider-container  bg-[#eeeeeeab] py-10">
+    <div className="slider-container  bg-[#eeeeeeab] overflow- py-10">
       <Link href="products">
         <Slider {...settings}>
           <div>

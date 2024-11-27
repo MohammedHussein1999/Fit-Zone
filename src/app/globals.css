@@ -27,9 +27,7 @@
   @apply no-underline text-lg hover:text-min text-white font-bold cursor-pointer;
 }
 
-.link-nav-min.login {
-  @apply bg-yellow-600 hover:text-gray-50 hover:bg-seconder transition-colors ease-linear p-1 px-2 rounded-lg;
-}
+
 
 /* LOGIN */
 .form-log-in {

@@ -9,9 +9,8 @@ import {
   FormHelperText,
 } from "@mui/material";
 import Link from "next/link";
-import Image from "next/image";
 import useForm from "@/app/_hook/useForm";
-import TextInput from "../form_items/TextInput";
+import TextInput from "../../shared/TextInput";
 import CustomRadioGroup from "../form_items/CustomRadioGroup";
 import Logo from "../../Logo/Logo";
 const Register = () => {
@@ -58,15 +57,23 @@ const Register = () => {
     validate
   );
 
-  const handleSubmit = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (isValid) {
-        console.log(formData);
-      }
-    },
-    [isValid, formData]
-  );
+  const handleSubmit = async (e) => {
+
+   e.preventDefault();
+   console.log(formData)
+
+   try {
+     const res = await axios.post("/api/auth/register", formData);
+     console.log(res)
+     console.log("Registration successful! Redirecting to login...");
+     setTimeout(() => {
+       router.push("/login");
+     }, 2000);
+   } catch (err) {
+     console.log(err.response?.data?.message || "Something went wrong");
+   }
+ };
+
 
   const socialStatusOptions = useMemo(
     () => [
