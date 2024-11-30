@@ -60,24 +60,6 @@ const Theme = createTheme({
       secondary: "#383838",
     },
   },
-  components: {
-    MuiSwitch: {
-      styleOverrides: {
-        switchBase: {
-          color: "#EDC02F",
-          "&.Mui-checked": {
-            color: "#EDC02F", 
-          },
-          "&.Mui-checked + .MuiSwitch-track": {
-            backgroundColor: "#EDC02F",
-          },
-        },
-        track: {
-          backgroundColor: "#121212", 
-        },
-      },
-    },
-  },
   breakpoints: {
     values: {
       xs: 0,
@@ -88,6 +70,7 @@ const Theme = createTheme({
     },
   },
 });
+
 
 
 export default function RootLayout({ children, Component, pageProps }) {

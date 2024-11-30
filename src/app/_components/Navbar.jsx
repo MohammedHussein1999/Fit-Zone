@@ -7,31 +7,23 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import useMediaQuery from "@mui/material/useMediaQuery";
 import { Divider, List, ListItem, ListItemButton, Drawer } from "@mui/material";
-import { useTheme } from "@mui/material/styles"; 
 import { AcmeLogo } from "./AcmeLogo";
+import { usePathname } from "next/navigation";
 
 export default function ButtonAppBar({ links }) {
-  const [open, setOpen] = useState(false); 
-  const theme = useTheme();
-  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"), {
-    noSsr: true,
-  });
-  console.log(isSmallScreen);
+  const [open, setOpen] = useState(false);
+  const loc = usePathname().replace("/", "");
 
-  function toggleMenu(state) {
+  const toggleMenu = (state) => {
     setOpen(state);
-    console.log(state);
-  }
+  };
 
   const DrawerList = (
     <Box
       className="w-full"
       sx={{
         width: 250,
-        color: "red",
-        bgcolor: theme.palette.main.primary,
         height: "100%",
       }}
       onClick={() => toggleMenu(false)}
@@ -40,7 +32,7 @@ export default function ButtonAppBar({ links }) {
         {links.map((link) => (
           <ListItem key={link.name_en} disablePadding>
             <ListItemButton className="hover-custom">
-              <Link href={link.name_en} className="link-nav-min">
+              <Link href={`/${link.name_en}`} className="link-nav-min">
                 {link.icon} {link.name_ar}
               </Link>
             </ListItemButton>
@@ -54,19 +46,15 @@ export default function ButtonAppBar({ links }) {
   return (
     <Box>
       <AppBar
+        className="bg-secondary"
         position="static"
-        color="inherit"
-        sx={{
-          flexGrow: 1,
-          bgcolor: theme.palette.main.primary,
-          color: "white",
-        }}
+        color="inherit" 
       >
-        <Toolbar className="container-min">
+        <Toolbar className="container-min flex justify-between">
           <IconButton
             onClick={() => toggleMenu(true)}
             size="large"
-            className="icon-nav-toggle"
+            className="md:hidden" 
             edge="start"
             color="inherit"
             aria-label="menu"
@@ -75,28 +63,26 @@ export default function ButtonAppBar({ links }) {
             <MenuIcon />
           </IconButton>
 
+          {/* Drawer: Slides in from the left */}
           <Drawer open={open} onClose={() => toggleMenu(false)}>
             {DrawerList}
           </Drawer>
 
-          {/* Conditionally render links based on screen size */}
-          {!isSmallScreen && (
-            <Box className="links-nav-min flex-grow">
-              {links.map((link, index) => (
-                <Link
-                  className={`link-nav-min ${
-                    index === 1 ? "login font-bold" : "font-medium"
-                  }`}
-                  key={link.name_en}
-                  href={`${link.name_en}`}
-                >
-                  {link.name_ar}
-                </Link>
-              ))}
-            </Box>
-          )}
+          <Box className="hidden md:flex space-x-4 flex-grow">
+            {links.map((link) => (
+              <Link
+                key={link.name_en}
+                href={`/${link.name_en}`}
+                className={`link-nav-min py-1 px-2 rounded-md transition-colors duration-300 ${
+                  link.name_en === loc ? "bg-min hover:bg-seconder" : ""
+                }`}
+              >
+                {link.name_ar}
+              </Link>
+            ))}
+          </Box>
 
-          {/* Logo aligned to the right */}
+          {/* Logo: Always visible */}
           <Button color="inherit">
             <AcmeLogo />
           </Button>

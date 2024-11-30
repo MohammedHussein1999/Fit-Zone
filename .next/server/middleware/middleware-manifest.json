@@ -1,0 +1,68 @@
+{
+  "sorted_middleware": [],
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge/chunks/_584822._.js",
+        "server/edge/chunks/[root of the server]__26efec._.js",
+        "server/edge/chunks/edge-wrapper_2feb94.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/dashboard{(\\\\.json)}?",
+          "originalSource": "/dashboard"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/login{(\\\\.json)}?",
+          "originalSource": "/login"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/register{(\\\\.json)}?",
+          "originalSource": "/register"
+        },
+        {
+          "regexp": "/:nextData(_next/data/[^/]{1,})?/protected/:path*{(\\\\.json)}?",
+          "originalSource": "/protected/:path*"
+        }
+      ],
+      "wasm": [],
+      "assets": [
+        {
+          "name": "server/edge/chunks/_584822._.js.map",
+          "filePath": "server/edge/chunks/_584822._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/_584822._.js",
+          "filePath": "server/edge/chunks/_584822._.js"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__26efec._.js.map",
+          "filePath": "server/edge/chunks/[root of the server]__26efec._.js.map"
+        },
+        {
+          "name": "server/edge/chunks/[root of the server]__26efec._.js",
+          "filePath": "server/edge/chunks/[root of the server]__26efec._.js"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_2feb94.js.map",
+          "filePath": "server/edge/chunks/edge-wrapper_2feb94.js.map"
+        },
+        {
+          "name": "server/edge/chunks/edge-wrapper_2feb94.js",
+          "filePath": "server/edge/chunks/edge-wrapper_2feb94.js"
+        }
+      ],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "dClwzjPLbmRzhEsqI0lDBhryvBl/r/oKIT17JkBegOI=",
+        "__NEXT_PREVIEW_MODE_ID": "e7a65752d794c750ba00375fd95b4ac6",
+        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "10c22aeaae8a4aa2bbbe80f20a97ff37f182efe85ad776a0f64817e5eaa13776",
+        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "dd616056aa4edc7ef990e30f73020bc7b759f538f65a4c4f113eb65383f33845"
+      }
+    }
+  },
+  "instrumentation": null,
+  "functions": {}
+}

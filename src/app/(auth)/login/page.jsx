@@ -3,8 +3,10 @@ import React from 'react'
 
 function page() {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <FormLogIn />
+    <div className=" min-h-screen w-full flex items-center justify-center">
+      
+        <FormLogIn />
+   
     </div>
   );
 }

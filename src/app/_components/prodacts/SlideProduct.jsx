@@ -13,7 +13,6 @@ export default function SlideProduct() {
           autoplay: true,
           speed: 500,
           autoplaySpeed: 3000,
-
           slidesToShow: 3,
           slidesToScroll: 3,
         };
@@ -30,7 +29,7 @@ export default function SlideProduct() {
     'public/images/10.jpg',
   ]
   return (
-    <div className="slider-container  bg-[#eeeeeeab] py-10">
+    <div className="slider-container  bg-[#eeeeeeab] overflow- py-10">
       <Link href="products">
         <Slider {...settings}>
           {imgArray.map((e,index) => (
