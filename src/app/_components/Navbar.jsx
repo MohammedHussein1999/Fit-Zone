@@ -7,9 +7,18 @@ import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Divider, List, ListItem, ListItemButton, Drawer } from "@mui/material";
+import {
+  Divider,
+  List,
+  ListItem,
+  ListItemButton,
+  Drawer,
+  Avatar,
+} from "@mui/material";
 import { AcmeLogo } from "./AcmeLogo";
 import { usePathname } from "next/navigation";
+
+
 
 export default function ButtonAppBar({ links }) {
   const [open, setOpen] = useState(false);
@@ -21,7 +30,7 @@ export default function ButtonAppBar({ links }) {
 
   const DrawerList = (
     <Box
-      className="w-full"
+      className="w-full bg-seconder h-full"
       sx={{
         width: 250,
         height: "100%",
@@ -45,16 +54,12 @@ export default function ButtonAppBar({ links }) {
 
   return (
     <Box>
-      <AppBar
-        className="bg-secondary"
-        position="static"
-        color="inherit" 
-      >
+      <AppBar className="bg-secondary" position="static" color="inherit">
         <Toolbar className="container-min flex justify-between">
           <IconButton
             onClick={() => toggleMenu(true)}
             size="large"
-            className="md:hidden" 
+            className="md:hidden text-white"
             edge="start"
             color="inherit"
             aria-label="menu"
@@ -81,7 +86,12 @@ export default function ButtonAppBar({ links }) {
               </Link>
             ))}
           </Box>
-
+          <Button onClick={() => toggleMenu(true)}>
+            <Avatar src="/broken-image.jpg" />
+          </Button>
+          <Drawer open={open} onClick={() => toggleMenu()}>
+            {DrawerList}
+          </Drawer>
           {/* Logo: Always visible */}
           <Button color="inherit">
             <AcmeLogo />

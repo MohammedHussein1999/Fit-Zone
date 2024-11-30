@@ -147,10 +147,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$mat
 ;
 ;
 ;
-;
-;
-;
-;
 const bull = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Box$2f$Box$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
     component: "span",
     sx: {
@@ -161,19 +157,19 @@ const bull = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$n
     children: "•"
 }, void 0, false, {
     fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-    lineNumber: 10,
+    lineNumber: 6,
     columnNumber: 3
 }, this);
 function CardBackg({ title, data, des = [] }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: " hover:-translate-y-3 ease-in-out  min-w-72 h-80  rounded-lg max-w-sm p-6 bg-white/30 backdrop-blur-lg roaunded-lg border border-white/20 shadow-lg",
+        className: " hover:-translate-y-3 transition-transform duration-450 min-w-72 h-80  rounded-lg max-w-sm p-6 bg-white/30 backdrop-blur-lg roaunded-lg border border-white/20 shadow-lg",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: " w-full text-3xl text-white/70 font-bold text-center",
                 children: title
             }, void 0, false, {
                 fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-                lineNumber: 21,
+                lineNumber: 17,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -181,7 +177,7 @@ function CardBackg({ title, data, des = [] }) {
                 children: data
             }, void 0, false, {
                 fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-                lineNumber: 22,
+                lineNumber: 20,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -191,8 +187,8 @@ function CardBackg({ title, data, des = [] }) {
                         children: el
                     }, el, false, {
                         fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-                        lineNumber: 24,
-                        columnNumber: 9
+                        lineNumber: 25,
+                        columnNumber: 11
                     }, this))
             }, void 0, false, {
                 fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
@@ -200,7 +196,7 @@ function CardBackg({ title, data, des = [] }) {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "fotter mt-auto w-full font-bold ",
+                className: "fotter mt-auto w-full font-bold",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$mui$2f$material$2f$Button$2f$Button$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
                     sx: {
                         boxShadow: "none",
@@ -213,18 +209,18 @@ function CardBackg({ title, data, des = [] }) {
                     children: "اشتـراك"
                 }, void 0, false, {
                     fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-                    lineNumber: 28,
+                    lineNumber: 32,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-                lineNumber: 27,
+                lineNumber: 31,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/_components/cardBackg.jsx/Card.jsx",
-        lineNumber: 20,
+        lineNumber: 16,
         columnNumber: 5
     }, this);
 }

@@ -1,9 +1,6 @@
 import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
+
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 const bull = (
   <Box
@@ -14,7 +11,7 @@ const bull = (
   </Box>
 );
 
-export default function CardBackg({title,data,des=[]}) {
+export default function CardBackg({ title, data, des = [] }) {
   return (
     <div className=" hover:-translate-y-3 transition-transform duration-450 min-w-72 h-80  rounded-lg max-w-sm p-6 bg-white/30 backdrop-blur-lg roaunded-lg border border-white/20 shadow-lg">
       <div className=" w-full text-3xl text-white/70 font-bold text-center">
