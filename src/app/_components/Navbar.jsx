@@ -17,10 +17,9 @@ import {
 } from "@mui/material";
 import { AcmeLogo } from "./AcmeLogo";
 import { usePathname } from "next/navigation";
+import ListUser from "./listUser";
 
-
-
-export default function ButtonAppBar({ links }) {
+export default function ButtonAppBar({ links, show }) {
   const [open, setOpen] = useState(false);
   const loc = usePathname().replace("/", "");
 
@@ -86,9 +85,11 @@ export default function ButtonAppBar({ links }) {
               </Link>
             ))}
           </Box>
-          <Button onClick={() => toggleMenu(true)}>
-            <Avatar src="/broken-image.jpg" />
-          </Button>
+          {show && (
+            <Button>
+              <ListUser />
+            </Button>
+          )}
           <Drawer open={open} onClick={() => toggleMenu()}>
             {DrawerList}
           </Drawer>

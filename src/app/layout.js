@@ -1,15 +1,15 @@
 "use client";
 import "./globals.css";
-import {Cairo} from 'next/font/google'
+import { Cairo } from "next/font/google";
 import {
   createTheme,
   StyledEngineProvider,
   ThemeProvider,
 } from "@mui/material";
 import Navbar from "./_components/Navbar";
-import Head from "next/head"; 
+import Head from "next/head";
 import Footer from "./_components/Footer";
-import { usePathname, useRouter } from "next/navigation"; 
+import { usePathname, useRouter } from "next/navigation";
 import {
   Emergency,
   Home,
@@ -28,7 +28,6 @@ const cairoFont = Cairo({
   variable: "--font-cairo",
   display: "swap",
 });
-
 
 const arrayLog = [
   { name_ar: "تسجيل", name_en: "register", icon: <HowToReg /> },
@@ -71,12 +70,8 @@ const Theme = createTheme({
   },
 });
 
-
-
-export default function RootLayout({ children, Component, pageProps }) {
+export default function RootLayout({ children }) {
   const loc = usePathname();
-  const router = useRouter();
-  
 
   const navLink =
     loc === "/"
@@ -84,10 +79,10 @@ export default function RootLayout({ children, Component, pageProps }) {
       : loc !== "/register" && loc !== "/login"
       ? arrayHome
       : null;
-
+  const show = loc === "/" ? false : true;
 
   return (
-    <html lang="en" >
+    <html lang="en">
       <Head>
         <link
           rel="stylesheet"
@@ -114,19 +109,18 @@ export default function RootLayout({ children, Component, pageProps }) {
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
-      
       </Head>
 
       <body className={`font-cairo ${cairoFont.className} `}>
-          <StyledEngineProvider injectFirst>
-        <ThemeProvider theme={Theme}>
-         {  navLink && <Navbar links={navLink} />}
+        <StyledEngineProvider injectFirst>
+          <ThemeProvider theme={Theme}>
+            {navLink && <Navbar links={navLink} show={show} />}
             <main dir="rtl" className="min-all bg-seconder">
               {children}
             </main>
             {navLink && <Footer />}
-        </ThemeProvider>
-          </StyledEngineProvider>
+          </ThemeProvider>
+        </StyledEngineProvider>
       </body>
     </html>
   );

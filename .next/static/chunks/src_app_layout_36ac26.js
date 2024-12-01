@@ -5,11 +5,11 @@
 (globalThis.TURBOPACK_CHUNK_LISTS = globalThis.TURBOPACK_CHUNK_LISTS || []).push({
   "path": "static/chunks/src_app_layout_36ac26.js",
   "chunks": [
+    "static/chunks/[root of the server]__a37444._.js",
     "static/chunks/node_modules_next_b0031f._.js",
-    "static/chunks/node_modules_@mui_material_d138f2._.js",
+    "static/chunks/node_modules_@mui_material_24b584._.js",
     "static/chunks/node_modules_@mui_system_esm_ed84bd._.js",
-    "static/chunks/node_modules_df2fc0._.js",
-    "static/chunks/[root of the server]__fe1010._.js",
+    "static/chunks/node_modules_f377a0._.js",
     "static/chunks/[root of the server]__966e54._.css"
   ],
   "source": "dynamic"
