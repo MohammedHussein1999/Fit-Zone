@@ -10,10 +10,10 @@ import React from "react";
 
 export default function CardBackg(props) {
   return (
-    <div>
-      <Card className=" bg-[#e4e4e4] border-black min-h-60">
-        <CardHeader>
-          <CardTitle>{props.title}</CardTitle>
+    <>
+      <Card className=" bg-[#e4e4e497] w-72 h-[350px]">
+        <CardHeader className="items-center font-bold ">
+          <CardTitle >{props.title}</CardTitle>
           <CardDescription>{ props.data}</CardDescription>
         </CardHeader>
         <CardContent>
@@ -25,6 +25,6 @@ export default function CardBackg(props) {
           <p>Card Footer</p>
         </CardFooter>
       </Card>
-    </div>
+    </>
   );
 }

@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/ROOT/Desktop/For%20me/test/Fit-Zone/src/components/ui/input.jsx"],"sourcesContent":["\"use client\"\r\nimport * as React from \"react\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nconst Input = React.forwardRef(({ className, type, ...props }, ref) => {\r\n  return (\r\n    <input\r\n      type={type}\r\n      className={cn(\r\n        \"flex h-8 w-full  rounded-md border-none border-min  bg-background px-3 py-2 text-base  file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-slate-800  disabled:cursor-not-allowed disabled:opacity-50 \",\r\n        className\r\n      )}\r\n      ref={ref}\r\n      {...props}\r\n    />\r\n  );\r\n})\r\nInput.displayName = \"Input\"\r\n\r\nexport { Input }\r\n"],"names":[],"mappings":";;;;AACA;AAEA;AAHA;;;;AAKA,MAAM,sBAAQ,8JAAM,UAAU,MAAC,CAAC,EAAE,SAAS,EAAE,IAAI,EAAE,GAAG,OAAO,EAAE;IAC7D,qBACE,6LAAC;QACC,MAAM;QACN,WAAW,CAAA,GAAA,sHAAA,CAAA,KAAE,AAAD,EACV,6TACA;QAEF,KAAK;QACJ,GAAG,KAAK;;;;;;AAGf;;AACA,MAAM,WAAW,GAAG"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

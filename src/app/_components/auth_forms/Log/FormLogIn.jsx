@@ -1,94 +1,54 @@
-"use client";
-import React, { useCallback } from "react";
-import { Box, Button, Typography, Paper } from "@mui/material";
-import TextInput from "../../shared/TextInput";
-import useForm from "@/app/_hook/useForm";
-import Logo from "../../Logo/Logo";
-import { useRouter } from "next/navigation";
-import CustmoizedButton from "../../shared/CustmoizedButton";
+"use client"
 
-const Login = () => {
-  const router = useRouter();
-  const initialValues = {
-    email: "",
-    password: "",
-  };
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useState } from "react";
+import { useActionState } from "react";
 
-  const validate = useCallback((values) => {
-    const errors = {};
-    if (!values.email) errors.email = "البريد الالكتروني مطلـوب";
-    if (!values.password) errors.password = "كلمة المرور مطلوبة";
-    return errors;
-  }, []);
+const initialState = {
+  message: "",
+};
 
-  const { formData, errors, isValid, handleChange } = useForm(
-    initialValues,
-    validate
-  );
-
-  const handleSubmit = useCallback(
-    (e) => {
-      e.preventDefault();
-      if (isValid) {
-        router.replace("/home");
-      }
-    },
-    [isValid, router]
-  );
-
+const Login = ({action}) => {
+const [userName,setUsername]=useState("")
+  const [password, setPassword] = useState("");
+  const [state, formAction] = useActionState(action, initialState);
   return (
-    <Box
-      className="form-logi w-96"
-      component="form"
-      noValidate
-      autoComplete="off"
-      onSubmit={handleSubmit}
-      sx={{ mt: 4 }}
+    <form
+      action={formAction}
+      className="w-80 px-3 py-4 h-84 bg-secondary rounded-sm text-white"
     >
-      <Paper
-        elevation={0}
-        sx={{ p: 4, borderRadius: 2 }}
-        className="bg-secondary text-white "
-      >
-        <Box
-          textAlign="center"
-          className="flex items-center justify-center flex-col"
-          mb={5}
-        >
-          <Logo />
-          <Typography variant="h5" component="h1" mt={2}>
-            تسجيل دخول
-          </Typography>
-        </Box>
-        <TextInput
-          label="البريد الالكتروني "
-          name="email"
-          type="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="you@example.com"
-          error={errors.email}
-        />
-        <TextInput
-          label="الباسـورد"
-          name="password"
-          type="password"
-          value={formData.password}
-          onChange={handleChange}
-          placeholder="*********01"
-          error={errors.password}
-        />
-        <CustmoizedButton
-          type={"submit"}
-          className={
-            "bg-min mt-4 py-[7px]  transition-colors duration-300 antialiased hover:bg-seconder"
-          }
-        >
-          تسجيل دخول
-        </CustmoizedButton>
-      </Paper>
-    </Box>
+      <h1 className="text-2xl mb-8 text-center">تسجيل دخول</h1>
+      <p aria-live="polite">{state?.message}</p>
+      <div className="inputs mb-5 ">
+        <div className="grid w-full max-w-sm items-center gap-1.5 mb-3">
+          <label htmlFor="username">اسم المستخدم</label>
+          <Input
+            type={"text"}
+            value={userName}
+            onChange={(event) => setUsername(event.target.value)}
+            placeplaceholder="UserName"
+            name={"userName"}
+            className={"text-slate-950 "}
+          />
+        </div>
+        <div className="grid w-full max-w-sm items-center gap-1.5 ">
+          <label htmlFor="username">كلمة المرور</label>
+          <Input
+            type={"text"}
+            value={password}
+            onChange={(event) => setPassword(event.target.value)}
+            placeplaceholder="Password"
+            name={"password"}
+            className={"text-slate-950 "}
+          />
+        </div>
+      </div>
+      <Button className="h-8 bg-min capitalize antialiased font-bold w-full">
+        دخول
+      </Button>
+    </form>
   );
 };
 
-export default React.memo(Login);
+export default Login;

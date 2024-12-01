@@ -132,7 +132,7 @@ const Button = /*#__PURE__*/ __TURBOPACK__imported__module__$5b$project$5d2f$nod
         ...props
     }, void 0, false, {
         fileName: "[project]/src/components/ui/button.jsx",
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 6
     }, this);
 });
