@@ -2,8 +2,6 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/auth.js"],"sourcesContent":["import NextAuth from \"next-auth\";\r\n\r\nexport const { handlers, signIn, signOut, auth } = NextAuth({\r\n  providers: [],\r\n});\r\n"],"names":[],"mappings":";;;;;;AAAA;AAAA;;AAEO,MAAM,EAAE,QAAQ,EAAE,MAAM,EAAE,OAAO,EAAE,IAAI,EAAE,GAAG,CAAA,GAAA,qJAAA,CAAA,UAAQ,AAAD,EAAE;IAC1D,WAAW,EAAE;AACf"}},
-    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/middleware.js"],"sourcesContent":["export { auth as middleware } from \"auth\";\r\n\r\nexport const config = {\r\n  matcher: [\"/((?!api|_next/static|_next/image|.*\\\\.png$).*)\"],\r\n};\r\n"],"names":[],"mappings":";;;;AAEO,MAAM,SAAS;IACpB,SAAS;QAAC;KAAkD;AAC9D"}},
-    {"offset": {"line": 50, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/auth.js"],"sourcesContent":["// import NextAuth from \"next-auth\";\r\n\r\n// export const { handlers, signIn, signOut, auth } = NextAuth({\r\n//   providers: [],\r\n// });\r\n"],"names":[],"mappings":"AAAA,oCAAoC;AAEpC,gEAAgE;AAChE,mBAAmB;AACnB,MAAM"}},
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }

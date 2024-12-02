@@ -61,14 +61,17 @@ async function loginActions(prevState, formData) {
     const password = formData.get("password");
     if (!username && !password) {
         return {
-            message: "Please enter username and password"
+            message: "Please enter username and password",
+            payload: formData
         };
     }
     const response = await fetch(`http://localHost:4000/users?username=${username}`);
     const userData = await response.json();
     if (!userData.length) {
+        console.log("end with no user");
         return {
-            message: "The username Not Exist Please Register"
+            message: "The username Not Exist Please Register",
+            payload: formData
         };
     }
     console.log(userData);
@@ -77,7 +80,8 @@ async function loginActions(prevState, formData) {
         return (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$components$2f$navigation$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["redirect"])("/home");
     }
     return {
-        message: "The Password Or UserName is Not Correct!"
+        message: "The Password Or UserName is Not Correct!",
+        payload: formData
     };
 }
 ;
@@ -107,12 +111,12 @@ function page() {
             action: __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$_components$2f$auth_forms$2f$Log$2f$actions$2f$action$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"]
         }, void 0, false, {
             fileName: "[project]/src/app/(auth)/login/page.jsx",
-            lineNumber: 7,
+            lineNumber: 9,
             columnNumber: 7
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/(auth)/login/page.jsx",
-        lineNumber: 6,
+        lineNumber: 7,
         columnNumber: 5
     }, this);
 }

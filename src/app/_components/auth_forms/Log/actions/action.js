@@ -8,7 +8,10 @@ export default async function loginActions(prevState, formData) {
   const password = formData.get("password");
 
   if (!username && !password) {
-    return { message: "Please enter username and password" };
+    return {
+      message: "Please enter username and password",
+      payload: formData,
+    };
   }
 
   const response = await fetch(
@@ -16,7 +19,11 @@ export default async function loginActions(prevState, formData) {
   );
   const userData = await response.json();
   if (!userData.length) {
-    return { message: "The username Not Exist Please Register" };
+    console.log("end with no user");
+    return {
+      message: "The username Not Exist Please Register",
+      payload: formData,
+    };
     }
     console.log(userData);
     console.log(userData[0].password , password);
@@ -24,5 +31,8 @@ export default async function loginActions(prevState, formData) {
       
    return redirect("/home");
     }
-    return {message:"The Password Or UserName is Not Correct!"}
+    return {
+      message: "The Password Or UserName is Not Correct!",
+      payload: formData,
+    };
 }

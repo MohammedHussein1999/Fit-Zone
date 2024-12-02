@@ -2,17 +2,20 @@
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
-import { useActionState } from "react";
+import {useActionState } from "react";
+
 
 const initialState = {
   message: "",
+
 };
 
-const Login = ({action}) => {
-const [userName,setUsername]=useState("")
-  const [password, setPassword] = useState("");
-  const [state, formAction] = useActionState(action, initialState);
+export default function LoginForm ({ action }) {
+
+  const [state, formAction] = useActionState(action, {
+    message: "",
+  });
+  console.log(state)
   return (
     <form
       action={formAction}
@@ -25,22 +28,20 @@ const [userName,setUsername]=useState("")
           <label htmlFor="username">اسم المستخدم</label>
           <Input
             type={"text"}
-            value={userName}
-            onChange={(event) => setUsername(event.target.value)}
             placeplaceholder="UserName"
             name={"userName"}
             className={"text-slate-950 "}
+            defaultValue={state?.payload?.get("userName") || ""}
           />
         </div>
         <div className="grid w-full max-w-sm items-center gap-1.5 ">
           <label htmlFor="username">كلمة المرور</label>
           <Input
             type={"text"}
-            value={password}
-            onChange={(event) => setPassword(event.target.value)}
             placeplaceholder="Password"
             name={"password"}
             className={"text-slate-950 "}
+            defaultValue={state?.payload?.get("password") || ""}
           />
         </div>
       </div>
@@ -51,4 +52,4 @@ const [userName,setUsername]=useState("")
   );
 };
 
-export default Login;
+;
