@@ -9,7 +9,7 @@ import {
 import Navbar from "./_components/Navbar";
 import Head from "next/head";
 import Footer from "./_components/Footer";
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
 import {
   Emergency,
   Home,

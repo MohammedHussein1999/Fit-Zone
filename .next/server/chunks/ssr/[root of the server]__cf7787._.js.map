@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/src/app/_components/auth_forms/Log/FormLogIn.jsx/proxy.js"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport default registerClientReference(\n    function() { throw new Error(\"Attempted to call the default export of [project]/src/app/_components/auth_forms/Log/FormLogIn.jsx <module evaluation> from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/app/_components/auth_forms/Log/FormLogIn.jsx <module evaluation>\",\n    \"default\",\n);\n"],"names":[],"mappings":";;;AAAA;;uCACe,CAAA,GAAA,qPAAA,CAAA,0BAAuB,AAAD,EACjC;IAAa,MAAM,IAAI,MAAM;AAAoT,GACjV,kFACA"}},
+    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 21, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/src/app/_components/auth_forms/Log/FormLogIn.jsx/proxy.js"],"sourcesContent":["import { registerClientReference } from \"react-server-dom-turbopack/server.edge\";\nexport default registerClientReference(\n    function() { throw new Error(\"Attempted to call the default export of [project]/src/app/_components/auth_forms/Log/FormLogIn.jsx from the server, but it's on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.\"); },\n    \"[project]/src/app/_components/auth_forms/Log/FormLogIn.jsx\",\n    \"default\",\n);\n"],"names":[],"mappings":";;;AAAA;;uCACe,CAAA,GAAA,qPAAA,CAAA,0BAAuB,AAAD,EACjC;IAAa,MAAM,IAAI,MAAM;AAAgS,GAC7T,8DACA"}},
+    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 125, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/src/app/page.js"],"sourcesContent":["import axios from \"axios\";\r\nimport FormLogIn from \"./_components/auth_forms/Log/FormLogIn\";\r\n\r\nexport default function Page() {\r\nfunc\r\n  // console.log(res);\r\n\r\n  return (\r\n    <div className=\"page-log  \">\r\n      <FormLogIn />\r\n      {/* <div>{ res }</div> */}\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AACA;;;;AAEe,SAAS;IACxB;IACE,oBAAoB;IAEpB,qBACE,8OAAC;QAAI,WAAU;kBACb,cAAA,8OAAC,4JAAA,CAAA,UAAS;;;;;;;;;;AAIhB"}},
+    {"offset": {"line": 149, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 160, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 160, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

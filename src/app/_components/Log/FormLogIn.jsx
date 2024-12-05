@@ -1,10 +1,10 @@
-
 import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { Button } from "@mui/material";
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Formik } from "formik";
 import * as Yup from "yup";
+
 
 export default function StateTextFields() {
   // التحقق من صحة المدخلات باستخدام Yup
@@ -16,6 +16,7 @@ export default function StateTextFields() {
       .required("كلمة المرور مطلوبة")
       .min(6, "كلمة المرور يجب أن تكون 6 أحرف على الأقل"),
   });
+
 
   return (
     <Formik
@@ -106,4 +107,3 @@ export default function StateTextFields() {
     </Formik>
   );
 }
-

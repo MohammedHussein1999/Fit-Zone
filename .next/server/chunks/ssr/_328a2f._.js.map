@@ -2,8 +2,8 @@
   "version": 3,
   "sources": [],
   "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/fit-zone/src/app/not-found.jsx"],"sourcesContent":["export default function NotFound() {\n  return (\n    <div>\n      <h1 className=\" text-white text-5xl   text-center\">Page Not Found</h1>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAG,WAAU;sBAAqC;;;;;;;;;;;AAGzD"}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/src/app/not-found.jsx"],"sourcesContent":["export default function NotFound() {\n  return (\n    <div>\n      <h1 className=\" text-white text-5xl   text-center\">Page Not Found</h1>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAG,WAAU;sBAAqC;;;;;;;;;;;AAGzD"}},
     {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/fit-zone/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
     {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }
