@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 22, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/auth.js"],"sourcesContent":["// import NextAuth from \"next-auth\";\r\n\r\n// export const { handlers, signIn, signOut, auth } = NextAuth({\r\n//   providers: [],\r\n// });\r\n"],"names":[],"mappings":"AAAA,oCAAoC;AAEpC,gEAAgE;AAChE,mBAAmB;AACnB,MAAM"}},
+    {"offset": {"line": 26, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

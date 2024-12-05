@@ -10,8 +10,13 @@
       "static/chunks/[root of the server]__ce35a2._.js",
       "static/chunks/[root of the server]__966e54._.css",
       "static/chunks/src_app_layout_36ac26.js",
+<<<<<<< HEAD
       "static/chunks/_db9df3._.js",
       "static/chunks/src_app_page_7ac816.js",
+=======
+      "static/chunks/src_725430._.js",
+      "static/chunks/src_app_page_2dc0ed.js",
+>>>>>>> df9f2c32bb63298107689a0e341f666b73bc83f3
       "static/chunks/node_modules_next_dist_compiled_react-dom_1f56dc._.js",
       "static/chunks/node_modules_next_dist_compiled_107ce8._.js",
       "static/chunks/node_modules_next_dist_client_9bb038._.js",

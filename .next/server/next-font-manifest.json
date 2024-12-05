@@ -8,7 +8,11 @@
       "static/media/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1-s.p.8424fbff.woff2",
       "static/media/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA-s.p.557c3361.woff2"
     ],
+<<<<<<< HEAD
     "[project]/src/app/_not-found/page": [
+=======
+    "[project]/src/app/(auth)/login/page": [
+>>>>>>> df9f2c32bb63298107689a0e341f666b73bc83f3
       "static/media/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscQyyS8p4_RHH1-s.p.8424fbff.woff2",
       "static/media/SLXVc1nY6HkvangtZmpQdkhzfH5lkSscRiyS8p4_RA-s.p.557c3361.woff2"
     ]

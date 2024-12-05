@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/middleware.js"],"sourcesContent":["// export { auth as middleware } from \"auth\";\r\n\r\n// export const config = {\r\n//   matcher: [\"/((?!api|_next/static|_next/image|.*\\\\.png$).*)\"],\r\n// };\r\n\r\nexport default function middleware(request) {\r\n  // console.log(request);\r\n}\r\n"],"names":[],"mappings":"AAAA,6CAA6C;AAE7C,0BAA0B;AAC1B,kEAAkE;AAClE,KAAK;;;;AAEU,SAAS,WAAW,OAAO;AACxC,wBAAwB;AAC1B"}},
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

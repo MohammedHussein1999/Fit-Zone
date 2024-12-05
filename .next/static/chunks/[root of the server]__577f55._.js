@@ -7060,7 +7060,7 @@ class Router {
                 if (!staticFilterData && routerFilterSValue) {
                     staticFilterData = routerFilterSValue ? routerFilterSValue : undefined;
                 }
-                const routerFilterDValue = ("TURBOPACK compile-time value", JSON.parse('{"numItems":0,"errorRate":0.0001,"numBits":0,"numHashes":null,"bitArray":[]}'));
+                const routerFilterDValue = ("TURBOPACK compile-time value", JSON.parse('{"numItems":1,"errorRate":0.0001,"numBits":20,"numHashes":14,"bitArray":[1,0,0,0,0,0,1,1,1,0,1,1,0,1,0,1,0,1,1,1]}'));
                 if (!dynamicFilterData && routerFilterDValue) {
                     dynamicFilterData = routerFilterDValue ? routerFilterDValue : undefined;
                 }
@@ -9590,7 +9590,11 @@ function parseStack(stack) {
             const res = regexNextStatic.exec(url.pathname);
             if (res) {
                 var _process_env___NEXT_DIST_DIR_replace, _process_env___NEXT_DIST_DIR;
+<<<<<<< HEAD
                 const distDir = (_process_env___NEXT_DIST_DIR = ("TURBOPACK compile-time value", "D:\\progects\\FotZone\\font-end\\.next")) == null ? void 0 : (_process_env___NEXT_DIST_DIR_replace = _process_env___NEXT_DIST_DIR.replace(/\\/g, '/')) == null ? void 0 : _process_env___NEXT_DIST_DIR_replace.replace(/\/$/, '');
+=======
+                const distDir = (_process_env___NEXT_DIST_DIR = ("TURBOPACK compile-time value", "C:\\Users\\COMPUMARTS\\OneDrive\\Desktop\\new_reposetory\\Fit-Zone-1\\.next")) == null ? void 0 : (_process_env___NEXT_DIST_DIR_replace = _process_env___NEXT_DIST_DIR.replace(/\\/g, '/')) == null ? void 0 : _process_env___NEXT_DIST_DIR_replace.replace(/\/$/, '');
+>>>>>>> df9f2c32bb63298107689a0e341f666b73bc83f3
                 if (distDir) {
                     frame.file = 'file://' + distDir.concat(res.pop()) + url.search;
                 }

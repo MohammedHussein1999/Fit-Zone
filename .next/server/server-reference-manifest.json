@@ -1,5 +1,17 @@
 {
-  "node": {},
+  "node": {
+    "60d8456760b7d0a3a8f9825ffc722abf9ebaac873c": {
+      "workers": {
+        "app/(auth)/login/page": {
+          "moduleId": "[project]/.next-internal/server/app/(auth)/login/page/actions.js { ACTIONS_MODULE0 => \"[project]/src/app/_components/auth_forms/Log/actions/action.js [app-rsc] (ecmascript)\" } [app-rsc] (ecmascript)",
+          "async": false
+        }
+      },
+      "layer": {
+        "app/(auth)/login/page": "rsc"
+      }
+    }
+  },
   "edge": {},
   "encryptionKey": "dClwzjPLbmRzhEsqI0lDBhryvBl/r/oKIT17JkBegOI="
 }
