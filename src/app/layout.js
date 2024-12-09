@@ -74,11 +74,10 @@ export default function RootLayout({ children }) {
   const loc = usePathname();
 
   const navLink =
-    loc === "/"
+    loc === "/" || loc === "/register" || loc === "/login"
       ? arrayLog
-      : loc !== "/register" && loc !== "/login"
-      ? arrayHome
-      : null;
+      : arrayHome;
+  
   const show = loc === "/" ? false : true;
 
   return (
@@ -114,7 +113,7 @@ export default function RootLayout({ children }) {
       <body className={`font-cairo ${cairoFont.className} `}>
         <StyledEngineProvider injectFirst>
           <ThemeProvider theme={Theme}>
-            {navLink && <Navbar links={navLink} show={show} />}
+            {navLink && <Navbar links={navLink} show={false} />}
             <main dir="rtl" className="min-all bg-seconder">
               {children}
             </main>

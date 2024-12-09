@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/config/auth.confg.js"],"sourcesContent":["export const authConfig = {\r\n  pages: {\r\n    signIn: \"/login\",\r\n  },\r\n \r\n};"],"names":[],"mappings":";;;AAAO,MAAM,aAAa;IACxB,OAAO;QACL,QAAQ;IACV;AAEF"}},
+    {"offset": {"line": 31, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 44, "column": 0}, "map": {"version":3,"sources":["turbopack://[project]/src/middleware.js"],"sourcesContent":["import { auth } from \"../auth\";\r\nexport { auth as middleware } from \"../auth\"\r\nexport const config = {\r\n  matcher: [\"/((?!api|_next/static|_next/image|.*\\\\.png$).*)\"],\r\n};\r\n\r\n\r\n\r\n"],"names":[],"mappings":";;;;;AAEO,MAAM,SAAS;IACpB,SAAS;QAAC;KAAkD;AAC9D"}},
+    {"offset": {"line": 54, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}

@@ -462,17 +462,10 @@ body {
   margin-top: .25rem !important;
 }
 
-<<<<<<< HEAD
 .mt-2 {
   margin-top: .5rem !important;
 }
 
-.mt-4 {
-  margin-top: 1rem !important;
-}
-
-=======
->>>>>>> df9f2c32bb63298107689a0e341f666b73bc83f3
 .inline-block {
   display: inline-block !important;
 }
@@ -565,13 +558,10 @@ body {
   width: 14rem !important;
 }
 
-<<<<<<< HEAD
-=======
 .w-64 {
   width: 16rem !important;
 }
 
->>>>>>> df9f2c32bb63298107689a0e341f666b73bc83f3
 .w-72 {
   width: 18rem !important;
 }

@@ -1,28 +1,21 @@
-"use client"
-
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {useActionState } from "react";
+import { auth, signIn } from "../../../../auth";
 
-
-const initialState = {
-  message: "",
-
-};
-
-export default function LoginForm ({ action }) {
-
-  const [state, formAction] = useActionState(action, {
-    message: "",
-  });
-  console.log(state)
+export default async function LoginForm(props) {
+  const session = await auth()
+  console.log("🚀 ~ LoginForm ~ session:", session)
+  const formAction = async (data) => {
+    "use server";
+    await signIn("credentials", data);
+  };
   return (
     <form
       action={formAction}
       className="w-80 px-3 py-4 h-84 bg-secondary rounded-sm text-white"
     >
       <h1 className="text-2xl mb-8 text-center">تسجيل دخول</h1>
-      <p aria-live="polite">{state?.message}</p>
+      <p aria-live="polite">{"state?.message"}</p>
       <div className="inputs mb-5 ">
         <div className="grid w-full max-w-sm items-center gap-1.5 mb-3">
           <label htmlFor="username">اسم المستخدم</label>
@@ -31,7 +24,6 @@ export default function LoginForm ({ action }) {
             placeplaceholder="UserName"
             name={"userName"}
             className={"text-slate-950 "}
-            defaultValue={state?.payload?.get("userName") || ""}
           />
         </div>
         <div className="grid w-full max-w-sm items-center gap-1.5 ">
@@ -41,7 +33,6 @@ export default function LoginForm ({ action }) {
             placeplaceholder="Password"
             name={"password"}
             className={"text-slate-950 "}
-            defaultValue={state?.payload?.get("password") || ""}
           />
         </div>
       </div>
@@ -50,6 +41,4 @@ export default function LoginForm ({ action }) {
       </Button>
     </form>
   );
-};
-
-;
+}

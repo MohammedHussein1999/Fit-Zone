@@ -2,14 +2,8 @@
   "version": 3,
   "sources": [],
   "sections": [
-<<<<<<< HEAD
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/src/app/not-found.jsx"],"sourcesContent":["export default function NotFound() {\n  return (\n    <div>\n      <h1 className=\" text-white text-5xl   text-center\">Page Not Found</h1>\n    </div>\n  );\n}\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAG,WAAU;sBAAqC;;;;;;;;;;;AAGzD"}},
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/COMPUMARTS/OneDrive/Desktop/new_reposetory/Fit-Zone/src/app/not-found.jsx"],"sourcesContent":["export default function NotFound() {\r\n  return (\r\n    <div>\r\n      <h1 className=\" text-white text-5xl   text-center\">Page Not Found</h1>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAG,WAAU;sBAAqC;;;;;;;;;;;AAGzD"}},
     {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://D%3A/progects/FotZone/font-end/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
-=======
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/COMPUMARTS/OneDrive/Desktop/new_reposetory/Fit-Zone-1/src/app/not-found.jsx"],"sourcesContent":["export default function NotFound() {\r\n  return (\r\n    <div>\r\n      <h1 className=\" text-white text-5xl   text-center\">Page Not Found</h1>\r\n    </div>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;;AAAe,SAAS;IACtB,qBACE,8OAAC;kBACC,cAAA,8OAAC;YAAG,WAAU;sBAAqC;;;;;;;;;;;AAGzD"}},
-    {"offset": {"line": 28, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/COMPUMARTS/OneDrive/Desktop/new_reposetory/Fit-Zone-1/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
->>>>>>> df9f2c32bb63298107689a0e341f666b73bc83f3
+    {"offset": {"line": 39, "column": 0}, "map": {"version":3,"sources":["file://C%3A/Users/COMPUMARTS/OneDrive/Desktop/new_reposetory/Fit-Zone/node_modules/next/src/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = require('../../module.compiled').vendored[\n  'react-rsc'\n].ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":";AAAAA,OAAOC,OAAO,GAAGC,QAAQ,0HAAyBC,QAAQ,CACxD,YACD,CAACC,kBAAkB","ignoreList":[0]}},
     {"offset": {"line": 41, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
 }
