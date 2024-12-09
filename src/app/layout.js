@@ -1,11 +1,6 @@
 "use client";
 import "./globals.css";
 import { Cairo } from "next/font/google";
-import {
-  createTheme,
-  StyledEngineProvider,
-  ThemeProvider,
-} from "@mui/material";
 import Navbar from "./_components/Navbar";
 import Head from "next/head";
 import Footer from "./_components/Footer";
@@ -44,31 +39,7 @@ const arrayHome = [
   { name_ar: "الصفحة الرئيسية", name_en: "home", icon: <Home /> },
 ];
 
-const Theme = createTheme({
-  direction: "rtl",
-  typography: {
-    fontFamily: "Cairo, sans-serif",
-    fontWeightRegular: 300,
-    fontWeightMedium: 500,
-    fontWeightBold: 700,
-  },
-  palette: {
-    main: {
-      main: "#EDC02F",
-      primary: "#242424",
-      secondary: "#383838",
-    },
-  },
-  breakpoints: {
-    values: {
-      xs: 0,
-      sm: 600,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
-    },
-  },
-});
+
 
 export default function RootLayout({ children }) {
   const loc = usePathname();
@@ -111,15 +82,12 @@ export default function RootLayout({ children }) {
       </Head>
 
       <body className={`font-cairo ${cairoFont.className} `}>
-        <StyledEngineProvider injectFirst>
-          <ThemeProvider theme={Theme}>
-            {navLink && <Navbar links={navLink} show={false} />}
+           {navLink && <Navbar links={navLink} show={false} />}
             <main dir="rtl" className="min-all bg-seconder">
               {children}
             </main>
-            {navLink && <Footer />}
-          </ThemeProvider>
-        </StyledEngineProvider>
+        {navLink && <Footer />}
+        
       </body>
     </html>
   );

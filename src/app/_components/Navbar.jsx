@@ -85,11 +85,11 @@ export default function ButtonAppBar({ links, show }) {
               </Link>
             ))}
           </Box>
-         
+          {show && (
             <Button>
               <ListUser />
             </Button>
-          
+          )}
           <Drawer open={open} onClick={() => toggleMenu()}>
             {DrawerList}
           </Drawer>

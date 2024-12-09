@@ -28,7 +28,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
-import { auth } from "@/auth";
 
 export default  function ListUser() {
 
