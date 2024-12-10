@@ -1,13 +1,27 @@
 import { Button } from "../../../../components/ui/button";
-import { Input } from "../../../../components/ui//input";
+import { Input } from "../../../../components/ui/input";
 import { auth, signIn } from "../../../../auth";
 
 export default async function LoginForm(props) {
-  const session = await auth()
-  console.log("🚀 ~ LoginForm ~ session:", session)
+  const session = await auth();
   const formAction = async (data) => {
     "use server";
-    await signIn("credentials", data);
+    try {
+      const response = await signIn("credentials", {
+        redirect: false,
+        email: data.get("userName"),
+        password: data.get("password"),
+        redirectTo: "/home",
+      }).then((res) => {
+        console.log(res,"☠️🚩")
+      }).catch((eror) => {
+        console.log(eror.cause.error, "☠️🚩");
+      })
+    } catch (error) {
+      
+      
+      console.log("🚀 ~  ~ error:", error.message);
+    }
   };
   return (
     <form

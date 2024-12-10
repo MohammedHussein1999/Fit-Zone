@@ -3,7 +3,6 @@ import { auth } from "./auth";
 import { login, POTECTED_ROUTE, PUBLIC_ROUTE, ROOT } from "./lib/routes";
 
 export const middleware = async ({ nextUrl }) => {
-  console.log(nextUrl.pathname ,"pathename")
   const session = await auth();
   const isAuth = !!session?.user;
   const isPublice =
@@ -17,6 +16,6 @@ export const middleware = async ({ nextUrl }) => {
 };
 
 export const config = {
-  // matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)", "/home"],
-  matcher: ["/home"],
+  matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)", "/home"],
+
 };

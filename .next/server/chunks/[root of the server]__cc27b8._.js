@@ -52,6 +52,11 @@ const authConfig = {
     pages: {
         signIn: "/login"
     },
+    session: {
+        strategy: "jwt",
+        maxAge: 10 * 24 * 60 * 60
+    },
+    secret: process.env.SECRET,
     provider: []
 };
 }}),
@@ -126,26 +131,13 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$co
 ;
 const { handlers, signIn, signOut, auth } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
     ...__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$auth$2e$confg$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["authConfig"],
-    callbacks: {
-        async authorized ({ auth, request: { nextUrl } }) {
-            const isLoggedIn = !!auth?.user;
-            return '/login';
-        },
-        async redirect (req) {
-            console.log("🚀  req:", req);
-            return '/home';
-        },
-        async session (sess) {
-            console.log("🚀 sess:", sess);
-        },
-        async jwt (token) {
-            console.log("🚀  token:", token);
-        }
-    },
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"])({
             authorize: async (credentials)=>{
-                console.log("🚀 ~ authorize: ~ credintal:", credentials);
+                console.log("🚩credentials🚩", credentials);
+                const existUser = await fetch(`http://localhost:4000/users?email=${credentials.email}`);
+                console.log(await existUser.json());
+                if (await existUser.json()) console.log(existUser);
                 return {
                     user: "ramez ahmed",
                     email: "ramezahmed@gmail.com"
@@ -153,7 +145,21 @@ const { handlers, signIn, signOut, auth } = (0, __TURBOPACK__imported__module__$
             }
         })
     ],
-    secret: process.env.SECRET
+    callbacks: {
+        signIn ({ user, account, credentials }) {
+            // return NextResponse.redirect(new URL("/home", props.credentials.callbackUrl));
+            return credentials.callbackUrl;
+        },
+        redirect ({ url, baseUrl }) {
+            console.log(url, baseUrl, "🚩🚩🚩🚩");
+            // // Allows relative callback URLs
+            // if (url.startsWith("/")) return `${baseUrl}${url}`
+            // // Allows callback URLs on the same origin
+            // else if (new URL(url).origin === baseUrl) return url
+            // return baseUrl
+            return "/home";
+        }
+    }
 });
 }}),
 "[project]/src/app/api/auth/[...nextAuth]/route.js [app-route] (ecmascript)": ((__turbopack_context__) => {

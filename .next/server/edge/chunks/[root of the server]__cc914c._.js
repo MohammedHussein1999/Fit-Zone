@@ -47,27 +47,58 @@ __turbopack_esm__({
     "signIn": (()=>signIn),
     "signOut": (()=>signOut)
 });
-var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$auth$2e$confg$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/src/config/auth.confg.js [middleware] (ecmascript)");
+(()=>{
+    const e = new Error("Cannot find module './config/auth.config'");
+    e.code = 'MODULE_NOT_FOUND';
+    throw e;
+})();
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/next-auth/index.js [middleware] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$providers$2f$credentials$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/next-auth/providers/credentials.js [middleware] (ecmascript) <module evaluation>");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$esm$2f$api$2f$server$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__$3c$module__evaluation$3e$__ = __turbopack_import__("[project]/node_modules/next/dist/esm/api/server.js [middleware] (ecmascript) <module evaluation>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__$3c$locals$3e$__ = __turbopack_import__("[project]/node_modules/next-auth/index.js [middleware] (ecmascript) <locals>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__ = __turbopack_import__("[project]/node_modules/@auth/core/providers/credentials.js [middleware] (ecmascript)");
 ;
 ;
 ;
+;
 const { handlers, signIn, signOut, auth } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2d$auth$2f$index$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__$3c$locals$3e$__["default"])({
-    ...__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$auth$2e$confg$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["authConfig"],
+    ...authConfig,
     providers: [
         (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$auth$2f$core$2f$providers$2f$credentials$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["default"])({
             authorize: async (credentials)=>{
-                console.log("🚀 ~ authorize: ~ credintal:", credentials);
-                return {
-                    user: "ramez ahmed",
-                    email: "ramezahmed@gmail.com"
-                };
+                if ("TURBOPACK compile-time truthy", 1) {
+                    console.log("🚩credentials🚩", credentials); // Avoid logging sensitive data in production
+                }
+                try {
+                    const existUser = await fetch(`http://localhost:4000/users?email=${credentials.email}`);
+                    const userData = await existUser.json();
+                    if (!userData || userData.length === 0) {
+                        throw new Error(JSON.stringify({
+                            errors: "User not found",
+                            status: false
+                        }));
+                    }
+                    // Replace with actual user data from the API response
+                    return {
+                        user: userData[0].name,
+                        email: userData[0].email
+                    };
+                } catch (error) {
+                    console.error("Error during authentication:", error);
+                    throw new Error(JSON.stringify({
+                        errors: "An error occurred during authentication",
+                        status: false
+                    }));
+                }
             }
         })
-    ]
+    ],
+    callbacks: {
+        // You can implement a custom redirect after sign-in here
+        signIn ({ user, account, credentials }) {
+            return credentials.callbackUrl; // Custom redirect logic
+        }
+    }
 });
 }}),
 "[project]/src/lib/routes.js [middleware] (ecmascript)": ((__turbopack_context__) => {
@@ -111,7 +142,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 const middleware = async ({ nextUrl })=>{
-    console.log(nextUrl.pathname, "pathename");
     const session = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$auth$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["auth"])();
     const isAuth = !!session?.user;
     const isPublice = __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$routes$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["PUBLIC_ROUTE"].find((route)=>nextUrl.pathname.startsWith(route)) || nextUrl.pathname === __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$routes$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["ROOT"] && !__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$routes$2e$js__$5b$middleware$5d$__$28$ecmascript$29$__["POTECTED_ROUTE"].find((route)=>nextUrl.pathname.includes(route));
@@ -120,8 +150,8 @@ const middleware = async ({ nextUrl })=>{
     }
 };
 const config = {
-    // matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)", "/home"],
     matcher: [
+        "/((?!api|_next/static|_next/image|.*\\.png$).*)",
         "/home"
     ]
 };

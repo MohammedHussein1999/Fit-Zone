@@ -26,7 +26,7 @@ const cairoFont = Cairo({
 
 const arrayLog = [
   { name_ar: "تسجيل", name_en: "register", icon: <HowToReg /> },
-  { name_ar: "تسجيل الدخول", name_en: "/", icon: <Login /> },
+  { name_ar: "تسجيل الدخول", name_en: "login", icon: <Login /> },
 ];
 const arrayHome = [
   { name_ar: "من نحن", name_en: "abutMe", icon: <Emergency /> },
