@@ -1,9 +1,5 @@
-import Register from "@/app/_components/auth_forms/Register/Register";
+import RegisterForm from "../../_components/auth_forms/Register/Register";
 
 export default function Page() {
-  return (
-    <div className="page-register py-3">
-      <Register />
-    </div>
-  );
+  return <div className="page-register py-3"><RegisterForm/></div>;
 }
